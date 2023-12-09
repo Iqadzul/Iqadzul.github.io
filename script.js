@@ -31,3 +31,21 @@ window.onscroll = function() {
       navMenu.classList.add('hidden');
     }
   });
+
+const contactform = document.getElementById("contact-form");
+
+contactform.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const url = e.target.action;
+  const formdata = new FormData(contactform)
+
+  fetch(url, {
+    method: "POST",
+    body: formdata,
+    mode: "no-cors"
+  }).then(() => {
+    alert("Formulir berhasil dikirim!");
+  })
+  .catch(() => alert("Error occured"))
+})

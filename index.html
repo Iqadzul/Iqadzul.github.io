@@ -5,61 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        container: {
-          center: true,
-          padding: '16px',
-        },
-        extend: {
-          colors: {
-            clifford: '#da373d',
-            primary: '#14b8a6',
-            dark: '#0f172a',
-            second: '#64748b',
-          },
-          screens: {
-            '2xl': '1320px',
-          }
-        }
-      }
-    }
-  </script>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-
-      .navbar-fixed {
-        @apply fixed z-[9999] bg-white bg-opacity-80;
-        backdrop-filter: blur(5px);
-        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-      }
-
-      .hamburger-line {
-        @apply w-[30px] h-[2px] my-2 block bg-dark;
-      }
-    
-      .hamburger-active > span:nth-child(1){
-        @apply rotate-45;
-      }
-
-      .hamburger-active > span:nth-child(2){
-        @apply scale-0;
-      }
-
-      .hamburger-active > span:nth-child(3){
-        @apply -rotate-45;
-      }
-      
-    }
+  <link href="dist/output.css" rel="stylesheet">
   </style>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -110,8 +56,8 @@
   <!-- head section end -->
 
   <!-- hero section start -->
-  <section id="home" class="pt-36 bg-gray-100">
-    <div class="container mx-auto px-4">
+  <section id="home" class="pt-36">
+    <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2">
           <h1 class="text-base font-semibold text-teal-500 md:text-xl">
@@ -135,6 +81,7 @@
               </svg>
             </span>
           </div>
+
         </div>
       </div>
     </div>
@@ -461,7 +408,7 @@
     </svg></a>
   <!-- btt end -->
   <script src="script.js"></script>
-
+  
 
 </body>
 
